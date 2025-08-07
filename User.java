@@ -1,10 +1,26 @@
 public class User {
     private String username;
     private String password;
+    private ArrayList<ToDoItem> toDoItems;
+
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+
+
+
+            // create new list when new user is created
+        this.toDoItems = new ArrayList<>();
+        }
+    /**
+     * Gets the to-do items of the user.
+     * @return A reference to the list of to-do items, which can be modified from outside the class.
+     */
+
+    public ArrayList<ToDoItem> getToDoItems() {
+        return toDoItems;
+
     }
 
     /**
